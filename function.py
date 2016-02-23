@@ -18,7 +18,7 @@ print e
 
 #Divided two arguements
 def div(q,w):
-	return q / w
+	return float(q / w)
 y = div(2,3)
 print y 
 
@@ -77,8 +77,8 @@ sub1= sub(9,3)
 sub2= sub(5,4)
 mul1= mul(2,3)
 mul2= mul(2,4)
-div1= div(6,3)
-div2= div(8,4)
+div1= div(5,3)
+div2= div(7,4)
 hoursfromsec1= hours_from_seconds_div(97000,4800)
 hoursfromsec2= hours_from_seconds_div(87000,4800)
 circlearea1= circle_area(4)
