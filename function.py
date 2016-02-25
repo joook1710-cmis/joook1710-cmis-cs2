@@ -121,3 +121,6 @@ print msg_box (str(center1))
 print msg_box (str(center2))
 print msg_box (str(msgbox1))
 print msg_box (str(msgbox2))
+
+#def is a keyword that indicates that this is a function definition 
+#print would print out the outcome 
