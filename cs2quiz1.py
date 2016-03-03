@@ -1,6 +1,6 @@
 #Part 1: Terminology (15 points)
 #1 1pt) What is the symbol "=" used for?
-# It is used to define a function. 
+# assign value to variable 
 #
 #
 #2 3pts) Write a technical definition for 'function'
@@ -14,20 +14,20 @@
 #4 5pts) We know 5 basic data types. Write the name for each one and provide two
 #   examples of each below
 #	1: String
-# "Hello world" / "I love you" / str(44) 
+# "Hello world" , "I love you"  
 #	2: Tuple
-# ("Hello", "Yo", 44) / (1, 2, 3, 4)
+# ("Hello", "Yo", 44) , (1, 2, 3, 4)
 #	3: Boolean 
-# 4 < 5 / 2 = 1 
+# true false  
 #	4: Integer
-# 4 / int("hello")
+# 4 , 5
 #	5: Floating point 
-# float(0.1) / float(3.7) 
+# 0.1, 3.7 
  
 #5 2pts) What is the difference between a "function definition" and a 
 #        "function call"?
 # Function call operator is used for operations that require a number of parameters. This works because expression list is a list instead of a single operand. 
-# Programming languages come with a prewritten set of functions that are kept in a library. And function definition is used to define what is kept in the library. 
+# Programming languages come with a prewritten set of functions that are kept in a library. And function definition is used to describe what is kept in the library. 
 #
 #
 #6 3pts) What are the 3 phases that every computer program has? What happens in
@@ -46,15 +46,25 @@
 #Finally, it should produce output like this:
 
 import math 
-def int( e, x):
-	return e * x
-def output ( e, x, y):
-	return out 
+def radiusFromArea(area):
+	radius = math.sprt (float(area)/math.pi)
+	return radius
+
 
 def main():
-	e= raw_input("c1: ")
-	x= raw_input("c2: ")
-	y= int(raw_input("c3: "))
+	c1= float(raw_input("Area of c1: "))
+	c2= float(raw_input("Area of c2: "))
+	c3= float(raw_input("Area of c3: "))
+
+	r1= radiusFromArea(c1)
+	r2= radiusFromArea(c2)
+	r3= radiusFromArea(c3)
+
+	d1= r1*2
+	d2= r2*2
+	d3= r3*2
+
+	
 	
 main()
 
