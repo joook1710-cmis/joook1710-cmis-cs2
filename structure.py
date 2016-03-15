@@ -1,34 +1,29 @@
 import math
 def exp(e, x):
     return e ** x
-def output (name, e, x, y):
-    out = """
-
-Hey! My favorite color is {} !
-Did you know:
-{} ** {} = {}
-""".format(name, e, x, y)
-    return out
+def volumeOfCube(v):
+	volume = (4/3) * math.pi * (v**3)
+def totals(a, b, c):
+	return int(a + b + c)
+def output (a, b, c, d):
+	out = """
+There are three cubes on the table. Cube One has a volume of {}, Cube Two has a volume of {}, Cube Three has a volume of {}. The total volume of three cubes are {}. 
+""". format(a, b, c, d)
+	return out 
 
 def main():
 	#input selection
-	name= raw_input("What is your favorite color? : ")
-	e= int(raw_input("Type a number: "))
-	x= int(raw_input("Type another: "))
+	# r = radius
+	r1= raw_input("The radius of Sphere one : ")
+	r2= int(raw_input("The radius of Sphere two: "))
+	r3= int(raw_input("The radius of Sphere three: "))
 	#processing
-	y= exp(e, x)
+	totalVolume= totals(r1, r2, r3)
 	#output 
-	out = output(name, e, x, y)
+	out = output(r1, r2, r3, totalVolume)
 	print out
 
 main()
 
-def vel
-d= 400
-t= 8 
-def main():
-	#input selection
-	name= raw_input("What's your name?: ")
-	d= raw_input( "Type the miles you traveled: ")
-	t= raw_input( "Type how long it took: ") 
+
 	
