@@ -1,62 +1,38 @@
 import random
 import math
-def guessNumber():
-	number =  int(raw_input("Type any number(0-10):"))
-	if number > 10 or number < 0:
-		number = random.randint(0, 10)
-	numberValue = float(number)/10
-	return numberValue
 
-def output(minnumber, maxnumber):
-	number= minnumber
-	number2= maxnumber
-	return """
-
-I am thinking of a number from {} to {}
-What do you think it is?: 
-
-""".format(minnumber, maxnumber)
-	return output
-
-def minGuess(comp_number, your_number, difference):
-	minGuess= """
-The target was ()
-Your guess was ()
-That is under by ()
-""".format(comp_number, your_number, outcome)
-	return minGuess
-def maxGuess(comp_number, your_number, outcome):
-	maxGuess= """
-The target was ()
-Your guess was ()
-That is under by ()
-""".format(comp_number, your_number, outcome)
-	return maxGuess
-def correctGuess(comp_number, your_number, outcome):
-	correctGuess= """
-The target was ()
-Your guess was ()
-That is under by ()
-""".format(comp_number, your_number, outcome)
-	return correctGuess 
 
 def main():
-	number= int(raw_input("What is the minimum number?: "))
-	number2= int(raw_input("What is the maximum number?: "))
-	number3= int(raw_input("I'm thinking of a number from" + str(maximum) + ". \n" + "What do you think it is?: "))
+	minimum= int(raw_input("What is the minimum number?: "))
+	maximum= int(raw_input("What is the maximum number?: "))
 
-	comp_number = int(random.randint (big, small))
-	outcome= abs(sub(int(your_guess), comp_number))
-	if comp_number < str(abs(int(your_number))):
-		minGuess = minGuess(comp_number, your_number, outcome)
-		print minGuess
-	elif comp_number > str(abs(int(outcome))):
-		maxGuess(comp_number, your_number, outcome)
-		print maxGuess 
-	elif comp_number == abs(int(outcome)): 
-		correctGuess = (comp_number, your_number, outcome)
-		print correctGuess 
+	output = """ I'm thinking of a number between {} and {}. """.format (minimum, maximum)
+	print output 
+
+	number = random.randint(int(minimum), int(maximum))
+	your_number = raw_input("Guess the number:")
+	output = """ The number was {}: """.format(number)
+	print output
+	output = """ Your guess was {}: """.format(your_number)
+
+if your_number == number:
+	return True
+	output = " Congratulations, you guessed the number correctly"		
+	print output
+
+
+	if your_number > number:
+		difference = int(your_number) -  int(number)
+		
+	output = """ Thats {} higher than the number """.format(difference)
+	print output	
+	
+	if your_number < number:
+		more_than = int(number) - int(number)
+		
+	output = """ Your guess was under by {}  """.format(more_than)
+	print output 
+
 main()
-
 
 
