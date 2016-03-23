@@ -13,14 +13,14 @@ There are three cubes on the table. Cube One has a volume of {}, Cube Two has a 
 
 def main():
 	#input selection
-	# r = radius
-	r1= raw_input("The radius of Sphere one : ")
-	r2= int(raw_input("The radius of Sphere two: "))
-	r3= int(raw_input("The radius of Sphere three: "))
+	# v = volume
+	v1= int(raw_input("The volume of Cube one : "))
+	v2= int(raw_input("The volume of Cube two: "))
+	v3= int(raw_input("The volume of Cube three: "))
 	#processing
-	totalVolume= totals(r1, r2, r3)
+	totalVolume= totals(v1, v2, v3)
 	#output 
-	out = output(r1, r2, r3, totalVolume)
+	out = output(v1, v2, v3, totalVolume)
 	print out
 
 main()
