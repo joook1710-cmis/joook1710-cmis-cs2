@@ -5,7 +5,7 @@
 #c) or 
 #
 #2) What does 'return' do?
-# gives/ prints out the output of the function 
+# gives out the output of the function 
 #
 #
 #
@@ -19,14 +19,14 @@
 #Type the values for 12 of the 16 of the variables below.
 #
 #problem1_a) 36
-#problem1_b) -3
+#problem1_b) square root of 3
 #problem1_c) 0
 #problem1_d) 5
 #
 #problem2_a) true
-#problem2_b) true 
-#problem2_c) true 
-#problem2_d) false 
+#problem2_b) false 
+#problem2_c) false
+#problem2_d) true 
 #
 #problem3_a) 0.3 (returning the C value)
 #problem3_b) 0.5 (returning the B value)
@@ -35,7 +35,7 @@
 #
 #problem4_a) 7
 #problem4_b) 5
-#problem4_c) 1.5
+#problem4_c) 0.125
 #problem4_d) 5
 #
 
@@ -54,16 +54,16 @@ def comparing_numbers( a, b, c):
 
 def main():
 
-	num1 = float(input("Enter first number: "))
-	num2 = float(input("Enter second number: "))
-	num3 = float(input("Enter third number: "))
+	num1 = float(raw_input("Enter first number: "))
+	num2 = float(raw_input("Enter second number: "))
+	num3 = float(raw_input("Enter third number: "))
 
 if (num1 > num2) and (num1 > num3):
-   largest = num1
+   largest == num1
 elif (num2 > num1) and (num2 > num3):
-   largest = num2
+   largest == num2
 else:
-   largest = num3
+   largest == num3
 
 print "The largest number was",largest
  
