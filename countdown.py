@@ -46,5 +46,10 @@ def main():
 	return
 main()
 
+def biggest(n1, n2):
+	if n1 > n2 
+	n1=raw_input("Next:" )
+
+
 
 	
