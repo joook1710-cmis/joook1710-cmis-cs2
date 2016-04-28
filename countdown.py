@@ -46,9 +46,21 @@ def main():
 	return
 main()
 
-def biggest(n1, n2):
-	if n1 > n2 
-	n1=raw_input("Next:" )
+def biggest(n1, largest):
+	if n1 == "":
+		return largest 
+	else:
+		largest = float(n1) 
+		n1 = raw_input("\nNext: ")
+	if largest >
+		return biggest( n1, largest)
+
+def main():
+	output = biggest(0, 0)
+
+	print "The biggest number is " + str(output)
+main()
+	
 
 
 
