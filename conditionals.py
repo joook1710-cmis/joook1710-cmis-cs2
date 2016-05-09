@@ -28,11 +28,6 @@ def key_color(item):
         strength = random.randint(0,10)
     return strength * random.random()
 
-def key_shape(item):
-
-	if item == "circle"
-		strength = 5
-	elif item == "triangle" 
 
 def getKickValue():
  
@@ -41,6 +36,22 @@ def getKickValue():
         number = random.randint(0, 10)
     KickValue = float(number)/100
     return KickValue    
+
+def getPunchValue():
+
+	number = int(raw_input("Type Karate punch power (0-10): "))
+	if number > 10 and number < 0:
+		number = random.randint(0, 10)
+	PunchValue = float(number)/100
+	return PunchValue 
+
+def getSlapValue():
+
+	number = int(raw_input("Type Karate slap power (0-10): "))
+	if number < 10 not number > 0:
+		number = random.randint(0, 10)
+	SlapValue = float(number)/100
+	return SlapValue 
 
 def wrestle(playerKeyPower, monsterKeyPower, playerAttackKeyValue):
 
@@ -59,7 +70,7 @@ def resultTemplate(playerKeyPower, monsterKeyPower, result):
     else:
         msg = "are still stuck in the cage"
     return """
-Your key power: {}
+You key power: {}
 Monster's key power: {}
 You {}!
 """.format(playerKeyPower, monsterKeyPower, msg)
@@ -81,6 +92,19 @@ def main():
     playerAttackValue2 = getKickValue()   
     result2 = wrestle(playerKeyPower, monster2KeyPower, playerAttackValue2)
     
+	playerAttackValue1 = getPunchValue()
+	result1 = wrestle(playerKeyPower, monster1KeyPower, playerAttackValue1)
+
+	playerAttackValue2 = getPunchValue()
+	result2 = wrestle(playerKeyPower, monster2KeyPower, playerAttackValue2)
+
+	playerAttackValue1 = getSlapValue()
+	result1 = wrestle(playerKeyPower, monster1KeyPower, playerAttackValue1)
+	
+	playerAttackValue2 = getSlapValue()
+	result2 = wrestle(playerKeyPower, monster2KeyPower, playerAttackValue2)
+
+
     output = """
 You picked the {} key.
 Monster Koola picked the {} key.
