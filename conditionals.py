@@ -48,7 +48,7 @@ def getPunchValue():
 def getSlapValue():
 
 	number = int(raw_input("Type Karate slap power (0-10): "))
-	if number < 10 not number > 0:
+	if number < 10 and not number >  0:
 		number = random.randint(0, 10)
 	SlapValue = float(number)/100
 	return SlapValue 
@@ -78,19 +78,20 @@ You {}!
 def main():
 
 
-    playerColor = raw_input("What colored key would you like to pick? ")
-    monster1Color = raw_input("What colored key does monster Koola pick? ")
-    monster2Color = raw_input("What colored key does monster Kooko pick? ")
+	playerColor = raw_input("What colored key would you like to pick? ")
+	monster1Color = raw_input("What colored key does monster Koola pick? ")
+	monster2Color = raw_input("What colored key does monster Kooko pick? ")
 
-    playerKeyPower = key_color(playerColor)
-    monster1KeyPower = key_color(monster1Color)
-    monster2KeyPower = key_color(monster2Color)
+	playerKeyPower = key_color(playerColor)
+	monster1KeyPower = key_color(monster1Color)
+	monster2KeyPower = key_color(monster2Color)
 
-    playerAttackValue1 = getKickValue()
-    result1 = wrestle(playerKeyPower, monster1KeyPower, playerAttackValue1)
 
-    playerAttackValue2 = getKickValue()   
-    result2 = wrestle(playerKeyPower, monster2KeyPower, playerAttackValue2)
+	playerAttackValue1 = getKickValue()
+	result1 = wrestle(playerKeyPower, mplayerColoronster1KeyPower, playerAttackValue1)
+
+	playerAttackValue2 = getKickValue()   
+	result2 = wrestle(playerKeyPower, monster2KeyPower, playerAttackValue2)
     
 	playerAttackValue1 = getPunchValue()
 	result1 = wrestle(playerKeyPower, monster1KeyPower, playerAttackValue1)
@@ -99,19 +100,18 @@ def main():
 	result2 = wrestle(playerKeyPower, monster2KeyPower, playerAttackValue2)
 
 	playerAttackValue1 = getSlapValue()
-	result1 = wrestle(playerKeyPower, monster1KeyPower, playerAttackValue1)
+	result1 = wrestle(playerKeyPower,monster1KeyPower, playerAttackValue1)
 	
 	playerAttackValue2 = getSlapValue()
 	result2 = wrestle(playerKeyPower, monster2KeyPower, playerAttackValue2)
 
-
-    output = """
+output = """
 You picked the {} key.
 Monster Koola picked the {} key.
 Monster Kooko picked the {} key.
-""".format(playerColor, monster1Color, monster2Color)
-    output += resultTemplate(playerKeyPower, monster1KeyPower, result1)
-    output += resultTemplate(playerKeyPower, monster2KeyPower, result2)
+	""".format(playerColor, monster1Color, monster2Color)
+output += resultTemplate(playerKeyPower, monster1KeyPower, result1)
+output += resultTemplate(playerKeyPower, monster2KeyPower, result2)
 
-    print output
+print output
 main()
