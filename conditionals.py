@@ -88,7 +88,7 @@ def main():
 
 
 	playerAttackValue1 = getKickValue()
-	result1 = wrestle(playerKeyPower, mplayerColoronster1KeyPower, playerAttackValue1)
+	result1 = wrestle(playerKeyPower, monster1KeyPower, playerAttackValue1)
 
 	playerAttackValue2 = getKickValue()   
 	result2 = wrestle(playerKeyPower, monster2KeyPower, playerAttackValue2)
@@ -105,13 +105,13 @@ def main():
 	playerAttackValue2 = getSlapValue()
 	result2 = wrestle(playerKeyPower, monster2KeyPower, playerAttackValue2)
 
-output = """
-You picked the {} key.
-Monster Koola picked the {} key.
-Monster Kooko picked the {} key.
+	output = """
+	You picked the {} key.
+	Monster Koola picked the {} key.
+	Monster Kooko picked the {} key.
 	""".format(playerColor, monster1Color, monster2Color)
-output += resultTemplate(playerKeyPower, monster1KeyPower, result1)
-output += resultTemplate(playerKeyPower, monster2KeyPower, result2)
+	output += resultTemplate(playerKeyPower, monster1KeyPower, result1)
+	output += resultTemplate(playerKeyPower, monster2KeyPower, result2)
 
-print output
+	print output
 main()
