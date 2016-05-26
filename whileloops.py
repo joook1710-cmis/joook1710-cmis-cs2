@@ -16,3 +16,22 @@ def counter(x):
 
 counter(10)
 counter(-3)
+
+def countfrom(x, y): 
+	if x < y:
+		while x <= y:
+			print x 
+			x += 1 
+	else y < x:
+		while y <= x:
+			print y
+			y += 1 
+countfrom(-10, 10)
+
+def sum_of_odds(n): 
+	total = 0
+	if n < 0:
+		while float(n) % 2 == 1:
+			n += 1
+			print total
+ 
