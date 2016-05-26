@@ -34,5 +34,13 @@ def average_odd_numbers(sum, ct):
         return average(sum, ct)
 def main():
     a = average(0.0 ,0.0)
-    print "The average of your odd numbers was {}.".format(a)
+    print "The average of the odd numbers was {}.".format(a)
 main()
+
+# +2
+# +2
+# +1 
+# +2
+# +1 
+# -1 
+# +1 
